@@ -1,0 +1,7 @@
+{
+  "name": "universe",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
