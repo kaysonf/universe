@@ -18,6 +18,7 @@
         "@babel/eslint-parser": "^7.15.0",
         "@babel/plugin-transform-runtime": "^7.15.0",
         "@babel/preset-env": "^7.15.0",
+        "@babel/preset-react": "^7.22.5",
         "@babel/preset-typescript": "^7.15.0",
         "@babel/runtime": "^7.15.3",
         "concurrently": "^6.2.1",
@@ -43,8 +44,11 @@
     },
     "dependencies": {
         "@types/jest": "^27.0.1",
+        "@types/react-dom": "^18.2.5",
         "@types/systemjs": "^6.1.1",
         "@types/webpack-env": "^1.16.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "single-spa": "^5.9.3"
     },
     "types": "dist/universe-root-config.d.ts"

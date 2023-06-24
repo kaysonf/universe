@@ -1,4 +1,7 @@
 import { registerApplication, start, LifeCycles } from "single-spa";
+import bootstrap from "./bootstrap";
+
+bootstrap();
 
 registerApplication({
   name: "@single-spa/welcome",
