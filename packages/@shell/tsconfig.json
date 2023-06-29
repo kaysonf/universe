@@ -1,0 +1,14 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "paths": {
+      "@universe/examples": ["../examples/src/universe-examples.tsx"]
+    },
+    "strict": true
+  },
+  "files": ["src/universe-shell.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

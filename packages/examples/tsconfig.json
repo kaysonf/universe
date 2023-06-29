@@ -1,10 +1,11 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/universe-root-config.ts"],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "strict": true
   },
+  "files": ["src/universe-examples.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }

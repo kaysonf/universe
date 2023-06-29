@@ -45,7 +45,11 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@universe/root-config": "//localhost:9000/universe-root-config.js"
+        "@universe/root-config": "//localhost:9000/universe-root-config.js",
+        "@universe/shell": "//localhost:9001/universe-shell.js",
+        "@universe/examples": "//localhost:9002/universe-examples.js",
+        "react": "https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js",
+        "react-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -71,6 +75,7 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <main></main>
+  <div id="trying"></div>
   <script>
     System.import('@universe/root-config');
   </script>
