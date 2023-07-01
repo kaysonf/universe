@@ -30,7 +30,7 @@ const json: IJsonModel = {
       },
       {
         type: "tabset",
-        weight: 50,
+        weight: 100,
         children: [
           {
             type: "tab",
