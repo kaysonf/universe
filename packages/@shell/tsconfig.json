@@ -4,7 +4,8 @@
     "jsx": "react-jsx",
     "declarationDir": "dist",
     "paths": {
-      "@universe/examples": ["../examples/src/universe-examples.tsx"]
+      "@universe/examples": ["../examples/src/universe-examples.tsx"],
+      "@universe/shared/components": ["../../shared/src/components/index.ts"]
     },
     "strict": true
   },

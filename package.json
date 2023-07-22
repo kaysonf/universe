@@ -2,7 +2,8 @@
   "name": "universe",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "shared"
   ],
   "scripts": {
     "start": "babel-node --presets latest devServer.js"
@@ -10,12 +11,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
-  },
-  "dependencies": {
     "concurrently": "^8.2.0",
     "portfinder": "^1.0.32",
-    "webpack": "^5.88.1"
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

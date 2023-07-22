@@ -1,72 +1,36 @@
 import * as React from "react";
-
-// import Parcel from "single-spa-react/parcel";
-
-import { Layout, Model, TabNode, IJsonModel } from "flexlayout-react";
-import "flexlayout-react/style/light.css";
-
-enum Component {
-  App = "app",
-  Nav = "nav",
-}
-
-const json: IJsonModel = {
-  global: { tabEnableFloat: true },
-  borders: [],
-  layout: {
-    type: "row",
-    weight: 100,
-    children: [
-      {
-        type: "tabset",
-        weight: 50,
-        children: [
-          {
-            type: "tab",
-            name: "One",
-            component: Component.App,
-          },
-        ],
-      },
-      {
-        type: "tabset",
-        weight: 100,
-        children: [
-          {
-            type: "tab",
-            name: "Two",
-            component: Component.App,
-          },
-        ],
-      },
-    ],
-  },
-};
-
-const model = Model.fromJson(json);
-
-function isComponent(s: string): s is Component {
-  return s in Component;
-}
+import { MantineProvider } from "@universe/shared/components";
+import { Workspace } from "./Workspace";
+import { Navigation } from "./navigation";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 export default function Root() {
-  const factory = (node: TabNode): JSX.Element => {
-    const component = node.getComponent();
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexGrow: 1,
+      }}
+    >
+      <MantineProvider>
+        <DndProvider backend={HTML5Backend}>
+          <Navigation />
 
-    if (component !== undefined && isComponent(component)) {
-      switch (component) {
-        case Component.App: {
-          return <button>{node.getName()}</button>;
-        }
-
-        default: {
-          return <></>;
-        }
-      }
-    } else {
-      return <></>;
-    }
-  };
-
-  return <Layout model={model} factory={factory} />;
+          <div
+            style={{
+              flexGrow: 1,
+              left: 0,
+              top: 0,
+              right: 0,
+              bottom: 0,
+              position: "relative",
+            }}
+          >
+            <Workspace />
+          </div>
+        </DndProvider>
+      </MantineProvider>
+    </div>
+  );
 }

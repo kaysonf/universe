@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
-const fs = require('fs');
+
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "universe",
@@ -11,11 +11,15 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    devServer: {
-      devMiddleware: {
-        writeToDisk: true,
-      },
+    output: {
+      ...defaultConfig.output,
+      clean: true,
     },
+    // devServer: {
+    //   devMiddleware: {
+    //     writeToDisk: true,
+    //   },
+    // },
 
     // plugins: [
     //   {

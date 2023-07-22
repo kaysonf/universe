@@ -3,6 +3,10 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "declarationDir": "dist",
+    "paths": {
+      "@universe/shared/application": ["../../shared/src/application/index"],
+      "@universe/shared/utils": ["../../shared/src/utils/index"]
+    },
     "strict": true
   },
   "files": ["src/universe-examples.tsx"],
