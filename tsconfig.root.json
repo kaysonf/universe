@@ -1,0 +1,14 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@universe/shared/components": ["shared/src/components/index.ts"],
+      "@universe/shared/application": ["shared/src/application/index.ts"],
+      "@universe/shared/utils": ["shared/src/utils/index.ts"]
+    },
+    "strict": true
+  },
+}

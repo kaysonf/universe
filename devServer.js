@@ -6,7 +6,7 @@ const {createEncodedImportMap} = require("./devServerUtils");
 
 
 const WORKSPACES_WITH_FRONTEND_CODE = [
-  {package: '@universe/examples', out: './packages/examples/dist'},
+  {package: '@universe/trading', out: './packages/trading/dist'},
 ]
 
 function createStartCommand(params) {
@@ -48,7 +48,8 @@ function createRootCommand({workspace, port}) {
     {workspace: '@universe/shell', port: SHELL_PORT, name: 'universe-shell.js'},
     {workspace: '@universe/shared/application', port: SHARED_PORT, name: 'universe-shared-application.js'},
     {workspace: '@universe/shared/utils', port: SHARED_PORT, name: 'universe-shared-utils.js'},
-    {workspace: '@universe/shared/components', port: SHARED_PORT, name: 'universe-shared-components.js'}
+    {workspace: '@universe/shared/components', port: SHARED_PORT, name: 'universe-shared-components.js'},
+    {workspace: '@universe/common', port: 4173, name: 'util.cjs'}
   ]);
 
   return `yarn workspace ${workspace} start --port ${port} --env IMPORT_MAP=${importMap} --stats errors-only`

@@ -14,8 +14,8 @@ module.exports.createEncodedImportMap = function (importArr) {
             return importMap;
         }, {
             // TODO move to module federation?
-            "react": "https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js",
-            "react-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+            "react": "https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js",
+            "react-dom": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"
         })
     }
 

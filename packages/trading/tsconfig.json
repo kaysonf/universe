@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.root.json",
-  "files": ["src/universe-shell.tsx"],
+  "files": ["src/universe-trading.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }
